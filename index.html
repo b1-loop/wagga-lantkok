@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    font-src https://fonts.gstatic.com;
+    img-src 'self' data:;
+    script-src 'self';
+    frame-src https://www.google.com;
+    connect-src 'none';
+    object-src 'none';
+    base-uri 'self';
+    form-action 'none';
+  " />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>Wägga Lantkök – Johannesvik, Kungshamn</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+
+  <!-- SEO -->
+  <meta name="description" content="Wägga Lantkök i Johannesvik, Kungshamn – vällagad mat vid Bohuskusten. Grill, pizza, hamburgare och skaldjur. Pizzabuffé på torsdagar och livemusik på sommaren." />
+  <meta name="theme-color" content="#271409" />
+
+  <!-- Open Graph (Facebook, Instagram, iMessage m.m.) -->
+  <meta property="og:type"        content="restaurant" />
+  <meta property="og:site_name"   content="Wägga Lantkök" />
+  <meta property="og:title"       content="Wägga Lantkök – En god måltid i lantlig miljö" />
+  <meta property="og:description" content="Vällagad mat vid Bohuskusten i Johannesvik. Grill, pizza, hamburgare och handskalade räkor. Pizzabuffé torsdagar och troubadour på sommarkvällar." />
+  <meta property="og:image"       content="logo.png" />
+  <meta property="og:locale"      content="sv_SE" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary" />
+  <meta name="twitter:title"       content="Wägga Lantkök – En god måltid i lantlig miljö" />
+  <meta name="twitter:description" content="Vällagad mat vid Bohuskusten i Johannesvik. Grill, pizza, hamburgare och handskalade räkor." />
+  <meta name="twitter:image"       content="logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ── NAVIGATION ─────────────────────────────────────────────── -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" aria-label="Wägga Lantkök – startsida">
+      <img src="logo.png" alt="Wägga Lantkök" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="#om">Om oss</a></li>
+      <li><a href="#oppettider">Öppettider</a></li>
+      <li><a href="#meny">Meny</a></li>
+      <li><a href="#evenemang">Evenemang</a></li>
+      <li><a href="#hitta">Hitta hit</a></li>
+    </ul>
+    <button class="nav-burger" id="burger" aria-label="Öppna meny" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile nav -->
+<div class="nav-mobile" id="navMobile" aria-hidden="true">
+  <a href="#om">Om oss</a>
+  <a href="#oppettider">Öppettider</a>
+  <a href="#meny">Meny</a>
+  <a href="#evenemang">Evenemang</a>
+  <a href="#hitta">Hitta hit</a>
+</div>
+
+<!-- ── HERO ───────────────────────────────────────────────────── -->
+<section class="hero" aria-label="Välkommen">
+  <div class="hero-bg"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-grid"></div>
+
+  <div class="hero-content">
+    <img src="logo.png" alt="Wägga Lantkök" class="hero-logo" />
+    <div class="hero-eyebrow">Johannesvik &middot; Kungshamn</div>
+    <h1 class="hero-h1">En god måltid<br />i <em>lantlig miljö</em></h1>
+    <p class="hero-sub">Vällagad mat vid Bohuskusten – där det lantliga möter det moderna.</p>
+    <div class="hero-btns">
+      <a href="#meny" class="btn btn-gold">Se menyn</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll-hint" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M12 5v14M5 12l7 7 7-7"/>
+    </svg>
+    Scrolla
+  </div>
+</section>
+
+<!-- ── ANNOUNCEMENT ───────────────────────────────────────────── -->
+<div class="announce" role="banner">
+  <div class="announce-item">
+    <span>📅</span>
+    <span>Öppnar <strong>2 maj 2026 kl 11:00</strong></span>
+  </div>
+  <span class="announce-sep">·</span>
+  <div class="announce-item">
+    <span>🎸</span>
+    <span>Troubadour <strong>fredagskvällar v. 26–32</strong></span>
+  </div>
+  <span class="announce-sep">·</span>
+  <div class="announce-item">
+    <span>📞</span>
+    <span>Boka: <strong><a href="tel:052331001" style="color:var(--gold-lt);text-decoration:none;">0523-31001</a></strong></span>
+  </div>
+</div>
+
+
+<!-- ── ABOUT ──────────────────────────────────────────────────── -->
+<section class="about" id="om">
+  <div class="about-inner">
+    <!-- Visual grid (left) -->
+    <div class="about-visual">
+      <div class="feat-card reveal">
+        <div class="feat-icon">🔥</div>
+        <div>
+          <div class="feat-title">Direkt från grillen</div>
+          <div class="feat-desc">Vi grillar kött och fisk med omsorg och hantverkskänsla – varje tallrik serveras med stolthet.</div>
+        </div>
+      </div>
+      <div class="feat-card reveal">
+        <span class="feat-icon">🥩</span>
+        <div class="feat-title">Grill & Kött</div>
+        <div class="feat-desc">Oxfilé, entrecôte och fläskfilé tillagade med precision.</div>
+      </div>
+      <div class="feat-card reveal">
+        <span class="feat-icon">🦐</span>
+        <div class="feat-title">Räkor & Skaldjur</div>
+        <div class="feat-desc">Handskalade räkor direkt från Västkusten.</div>
+      </div>
+      <div class="feat-card reveal">
+        <span class="feat-icon">🍕</span>
+        <div class="feat-title">Pizza & Burgare</div>
+        <div class="feat-desc">Smashburgare och pizza inspirerade av Bohuskusten.</div>
+      </div>
+      <div class="feat-card reveal">
+        <span class="feat-icon">🎸</span>
+        <div class="feat-title">Livemusik</div>
+        <div class="feat-desc">Troubadour under högsommaren.</div>
+      </div>
+    </div>
+
+    <!-- Text (right) -->
+    <div class="about-text reveal">
+      <div class="eyebrow">Välkommen</div>
+      <h2>Smak av landsbygd<br />med <em style="font-style:italic;color:var(--accent)">havets närvaro</em></h2>
+      <p class="lead">
+        Wägga Lantkök ligger i Johannesvik utanför Kungshamn på Bohuskusten — en plats där det lantliga möter det moderna och havet alltid finns i närheten.
+      </p>
+      <p class="body-text">
+        Vi är inte bara en grill. Vi är ditt smakrika strandhäng, där vågorna möter grilldoften och varje måltid serveras med omsorg och kärlek till råvarorna.
+        Boka ett bord och upplev sommaren med oss.
+      </p>
+      <a href="#meny" class="btn btn-dark">Utforska menyn</a>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- ── OPENING HOURS ───────────────────────────────────────────── -->
+<section class="hours" id="oppettider">
+  <div class="hours-inner">
+    <div class="hours-header">
+      <div class="eyebrow">Öppettider</div>
+      <h2>Välkommen i sommar</h2>
+      <p class="lead">Vi håller öppet under sommarsäsongen med mat, dryck och musik vid Bohuskusten.</p>
+    </div>
+
+    <div class="hours-grid">
+      <div class="hours-card reveal">
+        <div class="hours-icon-wrap">📅</div>
+        <h3>Öppnar säsongen</h3>
+        <p>Vi öppnar dörrarna för allmänheten</p>
+        <span class="hl">2 maj 2026 kl 11:00</span>
+      </div>
+      <div class="hours-card reveal">
+        <div class="hours-icon-wrap">📞</div>
+        <h3>Boka bord</h3>
+        <p>Vi rekommenderar att boka i förväg – ring oss direkt</p>
+        <span class="hl"><a href="tel:052331001">0523-31001</a></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── MENU ────────────────────────────────────────────────────── -->
+<section class="menu-section" id="meny">
+  <div class="menu-inner">
+    <div class="menu-header">
+      <div class="eyebrow">Meny</div>
+      <h2>Vad vi serverar</h2>
+      <p class="lead">Vällagad mat med råvaror från Västkusten och omgivningarna – från grillen till tallriken.</p>
+      <div class="menu-filters">
+        <button class="filter-btn active" data-filter="all">Alla rätter</button>
+        <button class="filter-btn" data-filter="forratter">Förrätter</button>
+        <button class="filter-btn" data-filter="kott">Kött</button>
+        <button class="filter-btn" data-filter="burger">Hamburgare</button>
+        <button class="filter-btn" data-filter="smaker">Soliga Smaker</button>
+        <button class="filter-btn" data-filter="pizza">Pizza</button>
+        <button class="filter-btn" data-filter="efterratt">Efterrätt</button>
+        <button class="filter-btn" data-filter="camping">Lilla Campingen</button>
+      </div>
+    </div>
+
+    <!-- Förrätter / Plocka Fort -->
+    <div class="menu-category" data-cat="forratter">
+      <div class="category-title">Förrätter &amp; Plocka Fort</div>
+      <ul class="menu-list">
+        <li class="menu-item">
+          <span class="menu-item-name">Vitlöksfralla</span>
+          <span class="menu-item-price">100 kr</span>
+          <span class="menu-item-desc">Skuret lantbröd fylls med färskost och toppas med vitlökssmör och persilja.</span>
+        </li>
+        <li class="menu-item">
+          <span class="menu-item-name">Halloumi</span>
+          <span class="menu-item-price">90 kr</span>
+          <span class="menu-item-desc">Halloumi sticks på grillen, serveras med honungsdipp i smak av vitlök och chili.</span>
+        </li>
+        <li class="menu-item">
+          <span class="menu-item-name">Wägga Fries</span>
+          <span class="menu-item-price">95 kr</span>
+          <span class="menu-item-desc">Pommes toppad med picklad rödlök, jalapeños och baconkross. Serveras med hemgjord ostsås.</span>
+        </li>
+        <li class="menu-item">
+          <span class="menu-item-name">Charkbricka <span class="menu-item-badge">Dela på 2</span></span>
+          <span class="menu-item-price">290 kr</span>
+          <span class="menu-item-desc">Mild salami, parmaskinka, ölkorv, brieost, gorgonzola, cornichons, oliver, kex och fikon/aprikosmarmelad.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Kött / Solbränd -->
+    <div class="menu-category" data-cat="kott">
+      <div class="category-title">Kött &amp; Grill</div>
+      <ul class="menu-list">
+        <li class="menu-item">
+          <span class="menu-item-name">Oxfilé <span class="menu-item-badge">200 g</span></span>
+          <span class="menu-item-price">330 kr</span>
+          <span class="menu-item-desc">Serveras med ugnsbakad potatis, morötter och sparris. Valfri sås: rödvinsås, pepparsås eller bearnaisesås.</span>
+        </li>
+        <li class="menu-item">
+          <span class="menu-item-name">Entrecôte <span class="menu-item-badge">200 g</span></span>
+          <span class="menu-item-price">310 kr</span>
+          <span class="menu-item-desc">Serveras med ugnsbakad potatis, morötter och sparris. Valfri sås: rödvinsås, pepparsås eller bearnaisesås.</span>
+        </li>
+        <li class="menu-item">
+          <span class="menu-item-name">Fläskfilé</span>
+          <span class="menu-item-price">270 kr</span>
+          <span class="menu-item-desc">Serveras med ugnsbakad potatis, morötter och sparris. Valfri sås.</span>
+        </li>
+        <li class="menu-item">
+          <span class="menu-item-name">Steak Sandwich</span>
+          <span class="menu-item-price">265 kr</span>
+          <span class="menu-item-desc">Grillad ryggbiff i en baguette med stekt lök, paprika, ostsås och krispig potatis.</span>
+        </li>
+        <li class="menu-item">
+          <span class="menu-item-name">Chicken BLT</span>
+          <span class="menu-item-price">250 kr</span>
+          <span class="menu-item-desc">Grillad kyckling serveras mellan två toastbröd med bacon, sallad, tomat och pommes.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Hamburgare -->
+    <div class="menu-category" data-cat="burger">
+      <div class="category-title">Hamburgare</div>
+      <p style="font-size:0.82rem;color:var(--muted);margin:0.5rem 0 0.25rem;font-style:italic;">Alla hamburgare går att få med dubbelpuck för +40 kr</p>
+      <ul class="menu-list">
+        <li class="menu-item">
+          <span class="menu-item-name">Cheese</span>
+          <span class="menu-item-price">170 kr</span>
+          <span class="menu-item-desc">Smashad högrevspuck på potatisbröd med dubbel cheddarost, ketchup, gul senap och picklad gurka. Serveras med krispiga pommes.</span>
+        </li>
+        <li class="menu-item">
+          <span class="menu-item-name">Wäggare</span>
+          <span class="menu-item-price">170 kr</span>
+          <span class="menu-item-desc">Smashad högrevspuck på potatisbröd med cheddarost, picklad rödlök, sallad och tryffelmajonäs. Serveras med krispiga pommes.</span>
+        </li>
+        <li class="menu-item">
+          <span class="menu-item-name">Hettan 🌶</span>
+          <span class="menu-item-price">170 kr</span>
+          <span class="menu-item-desc">Smashad högrevspuck på potatisbröd med cheddarost, jalapeños, rödlök och chilimajonnäs. Serveras med krispiga pommes.</span>
+        </li>
+        <li class="menu-item">
+          <span class="menu-item-name">Ärtan <span class="menu-item-badge">Vegansk</span></span>
+          <span class="menu-item-price">160 kr</span>
+          <span class="menu-item-desc">Ärtpuck på potatisbröd med frisésallad, picklad gurka och tomatskiva. Toppas med vegansk majonnäs. Serveras med krispiga pommes.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Soliga Smaker -->
+    <div class="menu-category" data-cat="smaker">
+      <div class="category-title">Soliga Smaker</div>
+      <ul class="menu-list">
+        <li class="menu-item">
+          <span class="menu-item-name">Caesarsallad</span>
+          <span class="menu-item-price">190 kr</span>
+          <span class="menu-item-desc">Slungad frisésallad med tomater och rödlök. Toppas med grillad kycklingfilé, krutonger, parmesanost och baconkross.</span>
+        </li>
+        <li class="menu-item">
+          <span class="menu-item-name">Panerad torskfilé</span>
+          <span class="menu-item-price">260 kr</span>
+          <span class="menu-item-desc">Panerad torskfilé med delikatesspotatits och gröna ärtor. Serveras med kustens kalla dillsås.</span>
+        </li>
+        <li class="menu-item">
+          <span class="menu-item-name">Räkmacka</span>
+          <span class="menu-item-price">200 kr</span>
+          <span class="menu-item-desc">Serveras på rostat lantbröd, toppad med citronmajonnäs, rucola, äggskivor, räkor och dill.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Pizza -->
+    <div class="menu-category" data-cat="pizza">
+      <div class="category-title">Pizza</div>
+      <ul class="menu-list">
+        <li class="menu-item">
+          <span class="menu-item-name">Klassiker</span>
+          <span class="menu-item-price">130 kr</span>
+          <span class="menu-item-desc">Tomatsås, ost och skinka.</span>
+        </li>
+        <li class="menu-item">
+          <span class="menu-item-name">Tropisk våg</span>
+          <span class="menu-item-price">140 kr</span>
+          <span class="menu-item-desc">Tomatsås, ost, skinka och champinjoner eller ananas.</span>
+        </li>
+        <li class="menu-item">
+          <span class="menu-item-name">Brasan</span>
+          <span class="menu-item-price">160 kr</span>
+          <span class="menu-item-desc">Tomatsås, ost, salami, honung och chiliflakes.</span>
+        </li>
+        <li class="menu-item">
+          <span class="menu-item-name">Bearnaise-båt</span>
+          <span class="menu-item-price">160 kr</span>
+          <span class="menu-item-desc">Tomatsås, ost, fläskfilé, champinjoner, sparris och bearnaisesås.</span>
+        </li>
+        <li class="menu-item">
+          <span class="menu-item-name">Havet är djupt</span>
+          <span class="menu-item-price">170 kr</span>
+          <span class="menu-item-desc">Tomatsås, ost, tonfisk, kräftstjärtar och räkor. Toppas med hummersås.</span>
+        </li>
+        <li class="menu-item">
+          <span class="menu-item-name">Piraten</span>
+          <span class="menu-item-price">170 kr</span>
+          <span class="menu-item-desc">Tomatsås, mozzarella, tomat, salami, lufttorkad skinka, oliver, ruccola och grön pesto.</span>
+        </li>
+        <li class="menu-item">
+          <span class="menu-item-name">Skärgård</span>
+          <span class="menu-item-price">170 kr</span>
+          <span class="menu-item-desc">Tomatsås, ost, oxfilé, gorgonzola, mozzarella, soltorkad tomat, ruccola och grön pesto.</span>
+        </li>
+        <li class="menu-item">
+          <span class="menu-item-name">Kompassen</span>
+          <span class="menu-item-price">160 kr</span>
+          <span class="menu-item-desc">Tomatsås, ost, gorgonzola, mozzarella, briéost, ruccola och balsamico.</span>
+        </li>
+        <li class="menu-item">
+          <span class="menu-item-name">Grillad västkust</span>
+          <span class="menu-item-price">160 kr</span>
+          <span class="menu-item-desc">Tomatsås, ost, kebab, sallad, tomat, rödlök, fefferoni och kebabsås.</span>
+        </li>
+        <li class="menu-item">
+          <span class="menu-item-name">Wiking</span>
+          <span class="menu-item-price">170 kr</span>
+          <span class="menu-item-desc">Tomatsås, ost, gorgonzola, champinjoner, oxfilé och bearnaisesås.</span>
+        </li>
+        <li class="menu-item">
+          <span class="menu-item-name">Sommarbris</span>
+          <span class="menu-item-price">170 kr</span>
+          <span class="menu-item-desc">Crème fraiche, briéost, päron, honung, valnötter och balsamico.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Lilla Campingen -->
+    <div class="menu-category" data-cat="camping">
+      <div class="category-title">Lilla Campingen</div>
+      <ul class="menu-list">
+        <li class="menu-item">
+          <span class="menu-item-name">Mini Puck</span>
+          <span class="menu-item-price">110 kr</span>
+          <span class="menu-item-desc">Hamburgare med ost, senap och ketchup. Serveras med pommes.</span>
+        </li>
+        <li class="menu-item">
+          <span class="menu-item-name">Lilla Kycklingen</span>
+          <span class="menu-item-price">80 kr</span>
+          <span class="menu-item-desc">Chicken nuggets serveras med pommes.</span>
+        </li>
+        <li class="menu-item">
+          <span class="menu-item-name">Smält Panini</span>
+          <span class="menu-item-price">90 kr</span>
+          <span class="menu-item-desc">Pressad toast med ost och skinka. Serveras med saltad chips.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Efterrätt -->
+    <div class="menu-category" data-cat="efterratt">
+      <div class="category-title">Efterrätt</div>
+      <ul class="menu-list">
+        <li class="menu-item">
+          <span class="menu-item-name">Vaniljglass</span>
+          <span class="menu-item-price">70 kr</span>
+        </li>
+        <li class="menu-item">
+          <span class="menu-item-name">Prinsessbakelse</span>
+          <span class="menu-item-price">70 kr</span>
+        </li>
+        <li class="menu-item">
+          <span class="menu-item-name">Lava Kaka <span class="menu-item-badge">Vegan · Glutenfri</span></span>
+          <span class="menu-item-price">80 kr</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── EVENEMANG ──────────────────────────────────────────────── -->
+<section class="evenemang" id="evenemang">
+  <div class="evenemang-inner evenemang-inner--full">
+    <div class="eyebrow" style="grid-column:1/-1;">Evenemang</div>
+    <h2 style="grid-column:1/-1;margin-bottom:2.5rem;">Sommarens höjdpunkter</h2>
+
+    <!-- Pizzabuffé -->
+    <div class="ev-block reveal">
+      <div class="ev-block-header">
+        <span class="ev-block-icon">🍕</span>
+        <div>
+          <div class="ev-block-title">Pizzabuffé</div>
+          <div class="ev-block-sub">Varje torsdag kväll</div>
+        </div>
+      </div>
+      <p class="ev-block-desc">Kom som du är och ta så mycket du vill. Ett välsmakande och enkelt alternativ för hela familjen.</p>
+      <div class="ev-details">
+        <div class="ev-detail-row">
+          <span class="ev-detail-icon">🕔</span>
+          <span>17:00 – 20:00</span>
+        </div>
+        <div class="ev-detail-row">
+          <span class="ev-detail-icon">🧒</span>
+          <span>Barn under 15 år — <strong>120 kr</strong></span>
+        </div>
+        <div class="ev-detail-row">
+          <span class="ev-detail-icon">🧑</span>
+          <span>Vuxen — <strong>185 kr</strong></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Troubadour -->
+    <div class="ev-block ev-block--dark reveal">
+      <div class="ev-block-header">
+        <span class="ev-block-icon">🎸</span>
+        <div>
+          <div class="ev-block-title">Troubadour</div>
+          <div class="ev-block-sub">Sommarkvällar 20:00 – 00:00</div>
+        </div>
+      </div>
+      <p class="ev-block-desc">Livemusik under stjärnorna vid Bohuskusten. Boka bord i god tid – dessa kvällar brukar gå snabbt!</p>
+      <div class="ev-dates">
+        <div class="ev-date">27 jun</div>
+        <div class="ev-date">3 jul</div>
+        <div class="ev-date">11 jul</div>
+        <div class="ev-date">18 jul</div>
+        <div class="ev-date">25 jul</div>
+        <div class="ev-date">31 jul</div>
+        <div class="ev-date">8 aug</div>
+      </div>
+      <div class="ev-detail-row" style="margin-top:1.25rem;">
+        <span class="ev-detail-icon">📞</span>
+        <span>Ring för bordsbokning: <strong><a href="tel:052331001" style="color:var(--gold-lt);text-decoration:none;">0523-31001</a></strong></span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── LOCATION ────────────────────────────────────────────────── -->
+<section class="location" id="hitta">
+  <div class="location-inner">
+    <div class="location-info">
+      <div>
+        <div class="eyebrow">Hitta hit</div>
+        <h2>Vi finns i Johannesvik</h2>
+        <p class="lead">Beläget på Johannesvik Camping, nära Klevekilens naturreservat och badbuktens lugna vatten.</p>
+      </div>
+
+      <div class="info-row reveal">
+        <div class="info-icon">📍</div>
+        <div class="info-body">
+          <h4>Adress</h4>
+          <p>Johannesvik Camping 1<br />456 91 Kungshamn</p>
+        </div>
+      </div>
+
+      <div class="info-row reveal">
+        <div class="info-icon">📞</div>
+        <div class="info-body">
+          <h4>Telefon</h4>
+          <p><a href="tel:052331001">0523-31001</a></p>
+        </div>
+      </div>
+
+      <div class="nearby-box reveal">
+        <h4>I närheten</h4>
+        <div class="nearby-list">
+          <div class="nearby-item">Klevekilens naturreservat</div>
+          <div class="nearby-item">Badbukt och badplats</div>
+          <div class="nearby-item">Hovenäset</div>
+          <div class="nearby-item">Johannesvik Camping</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="map-wrap reveal">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8598!2d11.214!3d58.374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4645113c04ebf5f1%3A0x6e09f30dba3ba00e!2sKungshamn!5e0!3m2!1ssv!2sse!4v1714000000000!5m2!1ssv!2sse"
+        sandbox="allow-scripts allow-same-origin allow-popups"
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"
+        title="Karta – Wägga Lantkök, Johannesvik">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────────────── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="logo.png" alt="Wägga Lantkök" />
+    </div>
+    <ul class="footer-links">
+      <li><a href="#om">Om oss</a></li>
+      <li><a href="#oppettider">Öppettider</a></li>
+      <li><a href="#meny">Meny</a></li>
+      <li><a href="#hitta">Hitta hit</a></li>
+      <li><a href="tel:052331001">0523-31001</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 Wägga Lantkök &nbsp;·&nbsp; Skapad av <a href="#" rel="noopener noreferrer" style="color:inherit;">Kimsoft Media AB</a></p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
