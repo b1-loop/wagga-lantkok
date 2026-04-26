@@ -164,7 +164,7 @@ const translations = {
     'loc-addr-h4':     'Adress',
     'loc-phone-h4':    'Telefon',
     'nearby-h4':       'I närheten',
-    'footer-copy':     '© 2026 Wägga Lantkök &nbsp;·&nbsp; Skapad av <a href="#" rel="noopener noreferrer" style="color:inherit;">Kimsoft Media AB</a>',
+    'footer-copy':     '© 2026 Wägga Lantkök &nbsp;·&nbsp; Skapad av <a href="#" rel="noopener noreferrer" style="color:inherit;">Bozhidar Ivanov</a>',
   },
   en: {
     'nav-om':          'About',
@@ -244,7 +244,7 @@ const translations = {
     'loc-addr-h4':     'Address',
     'loc-phone-h4':    'Phone',
     'nearby-h4':       'Nearby',
-    'footer-copy':     '© 2026 Wägga Lantkök &nbsp;·&nbsp; Created by <a href="#" rel="noopener noreferrer" style="color:inherit;">Kimsoft Media AB</a>',
+    'footer-copy':     '© 2026 Wägga Lantkök &nbsp;·&nbsp; Created by <a href="#" rel="noopener noreferrer" style="color:inherit;">Bozhidar Ivanov</a>',
   }
 };
 
