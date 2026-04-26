@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="Content-Security-Policy" content="
     default-src 'self';
-    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    style-src 'self' https://fonts.googleapis.com;
     font-src https://fonts.gstatic.com;
     img-src 'self' data:;
     script-src 'self';
@@ -29,13 +29,13 @@
   <meta property="og:site_name"   content="Wägga Lantkök" />
   <meta property="og:title"       content="Wägga Lantkök – En god måltid i lantlig miljö" />
   <meta property="og:description" content="Vällagad mat vid Bohuskusten i Johannesvik. Grill, pizza, hamburgare och handskalade räkor. Pizzabuffé torsdagar och troubadour på sommarkvällar." />
-  <meta property="og:image"       content="logo.png" />
+  <meta property="og:image"       content="https://b1-loop.github.io/wagga-lantkok/logo.png" />
   <meta property="og:locale"      content="sv_SE" />
 
   <meta name="twitter:card"        content="summary" />
   <meta name="twitter:title"       content="Wägga Lantkök – En god måltid i lantlig miljö" />
   <meta name="twitter:description" content="Vällagad mat vid Bohuskusten i Johannesvik. Grill, pizza, hamburgare och handskalade räkor." />
-  <meta name="twitter:image"       content="logo.png" />
+  <meta name="twitter:image"       content="https://b1-loop.github.io/wagga-lantkok/logo.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -177,7 +177,7 @@
   <span class="announce-sep">·</span>
   <div class="announce-item">
     <span>📞</span>
-    <span data-i18n-html="announce-3">Boka: <strong><a href="tel:052331001" style="color:var(--gold-lt);text-decoration:none;">0523-31001</a></strong></span>
+    <span data-i18n-html="announce-3">Boka: <strong><a href="tel:052331001" class="tel-highlight">0523-31001</a></strong></span>
   </div>
 </div>
 
@@ -216,7 +216,7 @@
 
     <div class="about-text reveal">
       <div class="eyebrow" data-i18n="about-eyebrow">Välkommen</div>
-      <h2 data-i18n-html="about-h2">Smak av landsbygd<br />med <em style="font-style:italic;color:var(--accent)">havets närvaro</em></h2>
+      <h2 data-i18n-html="about-h2">Smak av landsbygd<br />med <em class="accent-em">havets närvaro</em></h2>
       <p class="lead" data-i18n="about-lead">
         Wägga Lantkök ligger i Johannesvik utanför Kungshamn på Bohuskusten — en plats där det lantliga möter det moderna och havet alltid finns i närheten.
       </p>
@@ -254,7 +254,7 @@
         <div class="hours-icon-wrap">🕐</div>
         <h3 data-i18n="hours-card2-h3">Öppettider</h3>
         <p data-i18n-html="hours-card2-p1">2 maj – 14 jun<br />Fredag–Lördag · 11:00–22:00</p>
-        <p style="margin-top:0.75rem;" data-i18n-html="hours-card2-p2">15 jun – 15 aug<br />Varje dag · 11:00–00:00</p>
+        <p class="hours-sub" data-i18n-html="hours-card2-p2">15 jun – 15 aug<br />Varje dag · 11:00–00:00</p>
       </div>
       <div class="hours-card reveal">
         <div class="hours-icon-wrap">📞</div>
@@ -347,7 +347,7 @@
     <!-- Hamburgare -->
     <div class="menu-category" data-cat="burger">
       <div class="category-title">Hamburgare</div>
-      <p style="font-size:0.82rem;color:var(--muted);margin:0.5rem 0 0.25rem;font-style:italic;" data-i18n="burger-note">Alla hamburgare går att få med dubbelpuck för +40 kr</p>
+      <p class="burger-note" data-i18n="burger-note">Alla hamburgare går att få med dubbelpuck för +40 kr</p>
       <ul class="menu-list">
         <li class="menu-item">
           <span class="menu-item-name">Cheese</span>
@@ -498,8 +498,8 @@
 <!-- ── EVENEMANG ──────────────────────────────────────────────── -->
 <section class="evenemang" id="evenemang">
   <div class="evenemang-inner evenemang-inner--full">
-    <div class="eyebrow" style="grid-column:1/-1;" data-i18n="ev-eyebrow">Evenemang</div>
-    <h2 style="grid-column:1/-1;margin-bottom:2.5rem;" data-i18n="ev-h2">Sommarens höjdpunkter</h2>
+    <div class="eyebrow ev-full-width" data-i18n="ev-eyebrow">Evenemang</div>
+    <h2 class="ev-full-width ev-h2" data-i18n="ev-h2">Sommarens höjdpunkter</h2>
 
     <!-- Pizzabuffé -->
     <div class="ev-block reveal">
@@ -546,14 +546,14 @@
         <div class="ev-date">31 jul</div>
         <div class="ev-date">8 aug</div>
       </div>
-      <div class="ev-detail-row" style="margin-top:1.25rem;">
+      <div class="ev-detail-row ev-book-row">
         <span class="ev-detail-icon">📞</span>
-        <span data-i18n-html="ev-troub-book">Ring för bordsbokning: <strong><a href="tel:052331001" style="color:var(--gold-lt);text-decoration:none;">0523-31001</a></strong></span>
+        <span data-i18n-html="ev-troub-book">Ring för bordsbokning: <strong><a href="tel:052331001" class="tel-highlight">0523-31001</a></strong></span>
       </div>
     </div>
 
     <!-- Spelarlista -->
-    <div class="ev-block ev-lineup reveal" style="grid-column:1/-1;">
+    <div class="ev-block ev-block--full ev-lineup reveal">
       <div class="ev-block-header">
         <span class="ev-block-icon">🎤</span>
         <div>
@@ -672,7 +672,7 @@
         </svg>
       </a>
     </div>
-    <p class="footer-copy" data-i18n-html="footer-copy">© 2026 Wägga Lantkök &nbsp;·&nbsp; Skapad av <a href="#" rel="noopener noreferrer" style="color:inherit;">Bozhidar Ivanov</a></p>
+    <p class="footer-copy" data-i18n-html="footer-copy">© 2026 Wägga Lantkök &nbsp;·&nbsp; Skapad av <a href="#" rel="noopener noreferrer">Bozhidar Ivanov</a></p>
   </div>
 </footer>
 

@@ -85,6 +85,27 @@ const revealObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
 /* ── LANGUAGE SWITCHER ───────────────────────────────────── */
+function sanitizeHTML(html) {
+  const allowed = ['strong', 'em', 'a', 'br', 'span'];
+  const doc = new DOMParser().parseFromString(html, 'text/html');
+  const walk = (node) => {
+    for (const child of [...node.childNodes]) {
+      if (child.nodeType === Node.ELEMENT_NODE) {
+        if (!allowed.includes(child.tagName.toLowerCase())) {
+          child.replaceWith(...child.childNodes);
+        } else {
+          [...child.attributes].forEach(attr => {
+            if (attr.name.startsWith('on')) child.removeAttribute(attr.name);
+          });
+          walk(child);
+        }
+      }
+    }
+  };
+  walk(doc.body);
+  return doc.body.innerHTML;
+}
+
 const translations = {
   sv: {
     'nav-om':          'Om oss',
@@ -98,7 +119,7 @@ const translations = {
     'scroll-hint':     'Scrolla',
     'announce-1':      'Öppnar <strong>2 maj 2026 kl 11:00</strong>',
     'announce-2':      'Troubadour <strong>27 jun – 8 aug · 7 datum</strong>',
-    'announce-3':      'Boka: <strong><a href="tel:052331001" style="color:var(--gold-lt);text-decoration:none;">0523-31001</a></strong>',
+    'announce-3':      'Boka: <strong><a href="tel:052331001" class="tel-highlight">0523-31001</a></strong>',
     'feat-grill-title':'Direkt från grillen',
     'feat-grill-desc': 'Vi grillar kött och fisk med omsorg och hantverkskänsla – varje tallrik serveras med stolthet.',
     'feat-kott-title': 'Grill & Kött',
@@ -110,7 +131,7 @@ const translations = {
     'feat-musik-title':'Livemusik',
     'feat-musik-desc': 'Troubadour under högsommaren.',
     'about-eyebrow':   'Välkommen',
-    'about-h2':        'Smak av landsbygd<br />med <em style="font-style:italic;color:var(--accent)">havets närvaro</em>',
+    'about-h2':        'Smak av landsbygd<br />med <em class="accent-em">havets närvaro</em>',
     'about-lead':      'Wägga Lantkök ligger i Johannesvik utanför Kungshamn på Bohuskusten — en plats där det lantliga möter det moderna och havet alltid finns i närheten.',
     'about-body':      'Vi är inte bara en grill. Vi är ditt smakrika strandhäng, där vågorna möter grilldoften och varje måltid serveras med omsorg och kärlek till råvarorna. Boka ett bord och upplev sommaren med oss.',
     'review-text':     'Läs recensioner på Google',
@@ -148,7 +169,7 @@ const translations = {
     'ev-troub-title':  'Troubadour',
     'ev-troub-sub':    'Sommarkvällar 20:00 – 00:00',
     'ev-troub-desc':   'Livemusik under stjärnorna vid Bohuskusten. Boka bord i god tid – dessa kvällar brukar gå snabbt!',
-    'ev-troub-book':   'Ring för bordsbokning: <strong><a href="tel:052331001" style="color:var(--gold-lt);text-decoration:none;">0523-31001</a></strong>',
+    'ev-troub-book':   'Ring för bordsbokning: <strong><a href="tel:052331001" class="tel-highlight">0523-31001</a></strong>',
     'ev-lineup-title': 'Spelarlista 2026',
     'ev-lineup-sub':   'Vilka spelar när',
     'lineup-d1': 'Lör 27 jun',
@@ -178,7 +199,7 @@ const translations = {
     'scroll-hint':     'Scroll',
     'announce-1':      'Opens <strong>2 May 2026 at 11:00</strong>',
     'announce-2':      'Live music <strong>27 Jun – 8 Aug · 7 dates</strong>',
-    'announce-3':      'Book: <strong><a href="tel:052331001" style="color:var(--gold-lt);text-decoration:none;">0523-31001</a></strong>',
+    'announce-3':      'Book: <strong><a href="tel:052331001" class="tel-highlight">0523-31001</a></strong>',
     'feat-grill-title':'Straight from the grill',
     'feat-grill-desc': 'We grill meat and fish with care and craftsmanship – every plate is served with pride.',
     'feat-kott-title': 'Grill & Meat',
@@ -190,7 +211,7 @@ const translations = {
     'feat-musik-title':'Live music',
     'feat-musik-desc': 'Troubadour during midsummer.',
     'about-eyebrow':   'Welcome',
-    'about-h2':        'Taste of the countryside<br />with <em style="font-style:italic;color:var(--accent)">the sea nearby</em>',
+    'about-h2':        'Taste of the countryside<br />with <em class="accent-em">the sea nearby</em>',
     'about-lead':      'Wägga Lantkök is located in Johannesvik outside Kungshamn on the Bohuslän coast — a place where the rural meets the modern and the sea is always close.',
     'about-body':      'We\'re not just a grill. We\'re your flavorful beach hangout, where the waves meet the smell of the grill and every meal is served with care. Book a table and experience the summer with us.',
     'review-text':     'Read reviews on Google',
@@ -228,7 +249,7 @@ const translations = {
     'ev-troub-title':  'Troubadour',
     'ev-troub-sub':    'Summer evenings 20:00 – 00:00',
     'ev-troub-desc':   'Live music under the stars on the Bohuslän coast. Book early – these evenings fill up fast!',
-    'ev-troub-book':   'Call for reservations: <strong><a href="tel:052331001" style="color:var(--gold-lt);text-decoration:none;">0523-31001</a></strong>',
+    'ev-troub-book':   'Call for reservations: <strong><a href="tel:052331001" class="tel-highlight">0523-31001</a></strong>',
     'ev-lineup-title': 'Lineup 2026',
     'ev-lineup-sub':   'Who plays when',
     'lineup-d1': 'Sat 27 Jun',
@@ -251,6 +272,7 @@ const translations = {
 let currentLang = 'sv';
 
 function setLang(lang) {
+  if (lang !== 'sv' && lang !== 'en') return;
   currentLang = lang;
   document.documentElement.lang = lang;
 
@@ -261,7 +283,7 @@ function setLang(lang) {
 
   document.querySelectorAll('[data-i18n-html]').forEach(el => {
     const key = el.dataset.i18nHtml;
-    if (translations[lang][key] !== undefined) el.innerHTML = translations[lang][key];
+    if (translations[lang][key] !== undefined) el.innerHTML = sanitizeHTML(translations[lang][key]);
   });
 
   document.querySelectorAll('.lang-btn').forEach(btn => {

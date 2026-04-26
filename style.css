@@ -989,6 +989,17 @@ footer {
 .footer-links a:hover { color: var(--gold-lt); }
 .footer-copy { font-size: 0.76rem; color: rgba(255,255,255,0.25); }
 
+/* ── INLINE STYLE REPLACEMENTS ──────────────────────────── */
+.ev-full-width        { grid-column: 1 / -1; }
+.ev-h2                { margin-bottom: 2.5rem; }
+.hours-sub            { margin-top: 0.75rem; }
+.ev-book-row          { margin-top: 1.25rem; }
+.tel-highlight        { color: var(--gold-lt); text-decoration: none; }
+.footer-copy a        { color: inherit; }
+.burger-note          { font-size: 0.82rem; color: var(--muted); margin: 0.5rem 0 0.25rem; font-style: italic; }
+.accent-em            { font-style: italic; color: var(--accent); }
+.ev-block--full       { grid-column: 1 / -1; }
+
 /* ── LANG SWITCH ─────────────────────────────────────────── */
 .lang-switch {
   display: flex;
