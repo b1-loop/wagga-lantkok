@@ -52,6 +52,22 @@ document.querySelectorAll('.nav-mobile a').forEach(link => {
   link.addEventListener('click', closeNav);
 });
 
+/* Active nav link on scroll */
+const navSections = document.querySelectorAll('section[id]');
+const navAnchors  = document.querySelectorAll('.nav-links a');
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navAnchors.forEach(a => a.classList.remove('active'));
+      const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { rootMargin: '-50% 0px -50% 0px' });
+
+navSections.forEach(s => sectionObserver.observe(s));
+
 /* Scroll reveal */
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
