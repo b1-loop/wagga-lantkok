@@ -204,6 +204,26 @@ h2 {
 }
 .nav-links .nav-cta a:hover { background: var(--gold-lt); }
 
+.nav-social {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.nav-social a {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: rgba(255,255,255,0.55);
+  transition: color 0.2s, background 0.2s;
+}
+.nav-social a:hover {
+  color: var(--gold-lt);
+  background: rgba(255,255,255,0.07);
+}
+.nav-social svg { width: 16px; height: 16px; }
+
 .nav-burger {
   display: none;
   flex-direction: column;
@@ -988,6 +1008,7 @@ footer {
 
 @media (max-width: 700px) {
   .nav-links  { display: none; }
+  .nav-social { display: none; }
   .nav-burger { display: flex; }
   .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 0; }
   .stat-item { border-right: 1px solid rgba(0,0,0,0.07); border-bottom: 1px solid rgba(0,0,0,0.07); padding: 1.25rem 0.5rem; }
