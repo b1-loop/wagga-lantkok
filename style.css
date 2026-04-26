@@ -917,8 +917,43 @@ h2 {
   letter-spacing: 0.02em;
 }
 
+.ev-lineup { background: var(--white); }
+
+.lineup-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+.lineup-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  background: var(--sand);
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+.lineup-date {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.lineup-artist {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
 @media (max-width: 900px) {
   .evenemang-inner--full { grid-template-columns: 1fr; }
+  .lineup-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 500px) {
+  .lineup-grid { grid-template-columns: 1fr 1fr; }
 }
 
 /* ── FOOTER ──────────────────────────────────────────────── */
